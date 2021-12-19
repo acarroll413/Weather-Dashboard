@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons-wind.min.css" integrity="sha512-Ydyj0LLrJGMf7yUSU+QxZE4Pu/jVIutpdTOAozUrzZMslo+vLMX64rghLxEs+AKpN+GmnVNgXoeLlMwSqtyjPw==" crossorigin="anonymous" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-center text-white font-weight-bold"><h1>Weather Dashboard</h1></nav>
+    <div class="container">
+        <div class="row" id="actualContent">
+            <div class="col-12 col-lg-3 bg-light p-2 text-center text-md-left" id="searchForm">
+                <h5>Search for a City:</h5>
+                <form class="d-flex justify-content-center justify-content-md-start" id="searchForm">
+                    <input type="text" name="citySearch" id="citySearch"/>
+                    <button type="submit" class="btn btn-primary">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                        </svg>
+                    </button>
+                </form>
+                <div class="container p-0 mt-2 d-flex flex-column align-items-center align-items-md-start" id="savedSearches"><p style="font-size: x-small;">For a more precise search result use "city name (or Zip code), country". Ex. - London, GB or 37211, US.</p></div>
+            </div>
+            <div class="col-12 col-lg-9" id="searchContent">
+                <div class="row card m-2 mt-3 p-3" id="locationToday">
+                    <h2 class=''><span id="city"></span> <span id="date"></span> <img id="currentWeatherIcon" /></h2>
+                    <p>Temperature: <span id="temp"></span> &#176;F</p>
+                    <p>Humidity: <span id="humidity"></span>%</p>
+                    <p>Wind Speed: <span id="windSpeed"></span> MPH <span id="windDirection"></span></p>
+                    <p>UV Index: <span id="uvCheck"><span id="uvIndex"></span></span></p>
+                </div>
+                <div class="row m-1" id="locationForcast">
+                    <h2 class="col-12">5-Day Forcast:</h2>
+                    <div class="col-12 d-flex flex-column flex-sm-row justify-content-around" id="forcastCards"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
