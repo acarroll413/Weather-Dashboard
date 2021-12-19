@@ -8,9 +8,9 @@ The application is a weather dashboard runs in the browser and features dynamica
 
 ## Bulit with
 * HTML
-* CSS
 * JavaScript
 * Bootstrap
 * OpenWeather API
 
 ## Website
+https://acarroll413.github.io/Weather-Dashboard/
